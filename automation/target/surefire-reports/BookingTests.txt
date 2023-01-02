@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: BookingTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 22.499 s <<< FAILURE! - in BookingTests
+DeleteBooking_returnOk  Time elapsed: 12.101 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not <null>
+	at BookingTests.DeleteBooking_returnOk(BookingTests.java:196)
+
+UpdateBooking_returnOk  Time elapsed: 3.506 s  <<< ERROR!
+io.restassured.module.jsv.JsonSchemaValidationException: 
+com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Forbidden': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (StringReader); line: 1, column: 10]
+	at BookingTests.UpdateBooking_returnOk(BookingTests.java:165)
+Caused by: com.fasterxml.jackson.core.JsonParseException: 
+Unrecognized token 'Forbidden': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (StringReader); line: 1, column: 10]
+	at BookingTests.UpdateBooking_returnOk(BookingTests.java:165)
+
+partialUpdateBooking_returnOk  Time elapsed: 1.979 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <403>.
+
+	at BookingTests.partialUpdateBooking_returnOk(BookingTests.java:138)
+
